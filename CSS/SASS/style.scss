@@ -23,7 +23,7 @@ Date: 31/01/2015
 @mixin clearfix {
 	&:after {
 		content: "";
-		display: table;
+		display: table;fff
 		clear: both;
 	}
 }
