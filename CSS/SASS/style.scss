@@ -23,9 +23,9 @@ Date: 31/01/2015
 @mixin clearfix {
 	&:after {
 		content: "";
-		display: table;fff
+		display: table;
 		clear: both;
-	}ccc
+	}
 }
 
 @mixin border-radius($radius: 3px) {
@@ -34,3 +34,60 @@ Date: 31/01/2015
 	    -ms-border-radius: $radius;
 	        border-radius: $radius;
 }
+
+/**
+ * 0.0 SASS Variables
+ * ----------------------------------------------------------------------------
+ */
+
+// Grey Colors
+$white            : #fff;
+$lightlight-grey  : #f6f6f6;
+$light-grey       : #eee;
+$grey			  : #ccc;
+$dark-grey 	      : #999;
+$darkdark-grey 	  : #555;
+$black            : #222;
+$pureblack        : #000;
+
+// Flat UI Colors [ http://flatuicolors.com/ ]
+$turquoise        : #1abc9c;
+$green-sea        : #16a085;
+
+$emerald          : #2ecc71;
+$nephritis        : #27ae60;
+
+$peter-river      : #3498db;
+$belize-hole      : #2980b9;
+
+$amethyst         : #9b59b6;
+$wisteria         : #8e44ad;
+
+$wet-asphalt      : #34495e;
+$midnight-blue    : #2c3e50;
+
+$sun-flower       : #f1c40f;
+$orange           : #f39c12;
+
+$carrot           : #e67e22;
+$pumpkin          : #d35400;
+
+$alizarin         : #e74c3c;
+$pomegranate      : #c0392b;
+
+$clouds           : #ecf0f1;
+$silver			  : #bdc3c7;
+
+$concrete		  : #95a5a6;
+$asbestos		  : #7f8c8d;
+
+// Typography
+$sans-serif       : "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$monospace        : 'Droid Sans Mono', Courier, monospace;
+
+// Media Query
+$mobile-screen    : 40em;         // 640px
+$medium-screen    : 40.063em;     // 641px
+$standard-screen  : 61.875em;     // 990px
+$large-screen     : 64.063em;	  // 1025px
+$xlarge-screen    : 90.063em;	  // 1441px
