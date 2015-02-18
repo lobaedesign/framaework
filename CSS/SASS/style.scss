@@ -18,6 +18,10 @@ Date: 31/01/2015
 }
 
 @mixin clearfix {
+	zoom: 1;
+	&:before {
+		content: ''; display: block;
+	}
 	&:after {
 		content: "";
 		display: table;
@@ -139,10 +143,9 @@ a:hover {
 img {
 	max-width: 100%;
 	height: auto;
-}
-
-img {
 	-ms-interpolation-mode: bicubic;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 #map_canvas img,
@@ -152,6 +155,35 @@ img {
 .map_canvas embed,
 .map_canvas object {
 	max-width: none !important;
+}
+
+/* Visibility */
+.hide {
+	display: none !important;
+	visibility: hidden;
+}
+
+.show {
+	display: block !important;
+	visibility: visible;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.no-opacity {
+	opacity: 0;
+}
+
+.antialiased {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+textarea {
+	height: auto;
+	min-height: 50px;
 }
 
 /* Typography gaps resets */
@@ -183,8 +215,8 @@ td {
  * ----------------------------------------------------------------------------
  */
 
-// You can change the float behavior of an element by adding .left or .right to an HTML element.
-// To clear floats, add the class .clearfix to the parent element.
+/* You can change the float behavior of an element by adding .left or .right to an HTML element.
+   To clear floats, add the class .cl to the parent element. */
 
 .left {
 	float: left !important;
@@ -194,40 +226,13 @@ td {
 	float: right !important;
 }
 
-.cl:before, .cl:after {
+.cl:before,
+.cl:after {
 	content: " ";
 	display: table;
 }
 .cl:after {
 	clear: both;
-}
-
-.hide {
-	display: none !important;
-	visibility: hidden;
-}
-
-.invisible {
-	visibility: hidden;
-}
-
-.antialiased {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-img {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-textarea {
-	height: auto;
-	min-height: 50px;
-}
-
-select {
-	width: 100%;
 }
 
 /**
